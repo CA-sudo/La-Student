@@ -1,0 +1,154 @@
+html,body,rightSide,search,input{
+    margin: 5px;
+    padding:2px;
+}
+
+#rightSide {
+    padding:12px 20px;
+    background-color: whitesmoke;
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    margin-right: 180px;
+    float:right;
+    
+  }
+
+  #search{
+    margin-top:7px;
+    margin-bottom:1em;
+    margin-right:8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    float: right;
+    border-color: transparent;
+    background: rgba(255,255,255,.1);
+    box-shadow: white;
+} 
+
+#input{
+    margin-top:100px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    height:250px;
+    width:200px;
+    float: right;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+/* #search{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+    border:none;
+    float:right;
+    color: white;
+	border-radius: 15px;
+	font-size: 15px;
+	margin: 10px;
+	outline: 0;
+	width: 150px;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+
+    margin-top:7px;
+} */
+
+
+#username{
+    float:right;
+    background: rgba(255,255,255,.1);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: white;
+}
+
+#password{
+    float:right;
+    background: rgba(255,255,255,.1);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin:1em;
+    border-radius: 10px;
+    text-shadow: white;
+    
+}
+
+#userNameLabel{
+    float:right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size:20px;
+    margin-right:13px;
+    margin-top:10px;
+}
+
+#passwordLabel{
+    float:right;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    font-size:20px;
+    margin-right:15px;
+    margin-top:10px;
+}
+
+#signup{
+    margin:1em;
+    float: right;
+    color:black;
+    font-size:20px;
+    cursor: pointer;
+    border: none;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="friends.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   <div id="rightSide">
+            <div id="search">
+                <input type="text" style="direction: rtl;" id="search" value="חיפוש" onclick="value=''" >
+            </div>
+            <div id="input">
+                <label for="username" id="userNameLabel">שם משתמש</label>
+                <input type="text" id="username"  style="direction: rtl;" value="שם משתמש" onclick="value=''"><br><br>
+                <label for="password" id="passwordLabel">סיסמא</label>
+                <input type="text" id="password" style="direction: rtl;" value="סיסמא" onclick="value=''">
+                <button id="signup">להרשמה</button>
+            </div>
+            
+    </div>
+</body>
+</html>
+'use strict';
+
+const e = React.createElement;
+
+class Friends extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
+}
+
+const domContainer = document.querySelector('#friends');
+ReactDOM.render(e(LikeButton), domContainer);
