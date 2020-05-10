@@ -1,0 +1,72 @@
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li,a{
+	margin:0px;
+	padding:0px;
+}
+
+#div_sell_buttons{
+	height:800px;
+	width:550px;
+	background-color:#b3c6ff;
+}
+
+#div_sell_buttons #sell{
+	height:175px;
+	width:200px;
+	float:left;
+	margin-top:20px;
+	margin-bottom:125px;
+	margin-left:15px;
+	margin-right:50px;
+
+}
+
+
+#div_sell_buttons #rent{
+	height:175px;
+	width:200px;
+	float:right;
+	margin-top:20px;
+	margin-bottom:125px;
+	margin-left:50px;
+	margin-right:15px;
+}
+
+
+#div_sell_buttons #private_lesson{
+	height:175px;
+	width:200px;
+	float:left;
+	margin-left:15px;
+	margin-right:50px;
+}
+
+
+#div_sell_buttons #entertainment{
+	height:175px;
+	width:200px;
+	float:right;
+	margin-left:50px;
+	margin-right:15px;
+}
+
+
+#div_sell_buttons #apartments{
+	height:175px;
+	width:200px;
+	float:left;
+	margin-top:125px;
+	margin-bottom:20px;
+	margin-left:15px;
+	margin-right:50px;
+}
+
+
+#div_sell_buttons #jobs{
+	height:175px;
+	width:200px;
+	float:right;
+	margin-top:125px;
+	margin-bottom:20px;
+	margin-left:50px;
+	margin-right:15px;
+}
